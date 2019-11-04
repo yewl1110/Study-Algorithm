@@ -1,8 +1,5 @@
 #include <iostream>
 #include <queue>
-#include <minmax.h>
-#include <algorithm>
-#pragma warning (disable:4996)
 using namespace std;
 
 typedef struct Point{
@@ -11,7 +8,6 @@ typedef struct Point{
 };
 char arr[101][101];
 int _move[4][2] = {
-	//{0, -1}, {0, 1}, {-1, 0}, {1, 0} //UP DOWN LEFT RIGHT
 	{1,0},{0, 1},{-1,0},{0,-1}
 };
 int d[101][101];
@@ -24,7 +20,6 @@ int main() {
 	for (int i = 0; i < N; i++) {
 		scanf("%s", arr[i]);
 	}
-
 
 	d[0][0] = 1;
 	queue<Point> q;
