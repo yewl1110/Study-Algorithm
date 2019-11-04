@@ -12,8 +12,6 @@ int _move[4][2] = {
 };
 int d[101][101];
 
-int x, y;
-
 int main() {
 	int N, M;
 	scanf("%d %d", &N, &M);
