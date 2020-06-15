@@ -6,10 +6,6 @@ int n, k;
 int dp[10001];
 
 int main() {
-	ios::sync_with_stdio(false);
-	cin.tie(NULL);
-	cout.tie(NULL);
-
 	int value;
 	cin >> n >> k;
 
@@ -21,6 +17,6 @@ int main() {
 			dp[j] = min(dp[j], dp[j - value] + 1);
 		}
 	}
-	if (dp[k] == 100001) cout << "-1";
-	else cout << dp[k];
+	if (dp[k] == 100001) dp[k] = -1;
+	cout << dp[k];
 }
